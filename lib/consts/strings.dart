@@ -1,0 +1,14 @@
+const appname = "TechBrix";
+const email = "Email";
+const emailhint = "admin@admin.com";
+const password = "Kata Sandi";
+const passwordhint = "*******";
+const login = "Masuk";
+const signup = "Daftar";
+const forgotpassword = "Lupa Kata Sandi?";
+const dontaccount = "Belum Punya Akun?";
+const loginwith = "Masuk Dengan";
+const retypepassword = "Ulangi Kata Sandi";
+const name = "Nama";
+const namehint = "Nama Anda";
+const alreadyaccount = "Sudah Punya Akun?";
