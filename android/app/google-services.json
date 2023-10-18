@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "681007409717",
+    "project_id": "techbrix-application",
+    "storage_bucket": "techbrix-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681007409717:android:b52fd87fd9bb48ba7f1f7c",
+        "android_client_info": {
+          "package_name": "com.example.application_action"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcnqONsR-F_4eAj989w6Ri1OYoq-Q773Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
