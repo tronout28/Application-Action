@@ -1,6 +1,6 @@
 import 'package:application_action/consts/consts.dart';
 import 'package:application_action/firebase_options.dart';
-import 'on_boarding_page_view.dart';
+import 'pageview/on_boarding_page_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
