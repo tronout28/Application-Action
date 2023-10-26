@@ -1,3 +1,4 @@
+import 'package:application_action/consts/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -19,12 +20,11 @@ class OnBoardingContent extends StatelessWidget {
       children: [
         SvgPicture.asset(
           image1,
-          width: 360,
+          width: MediaQuery.of(context).size.width,
         ),
         Spacer(),
         SvgPicture.asset(
           image2,
-          width: 230,
         ),
         Spacer(),
         Container(
@@ -61,21 +61,20 @@ class OnBoardingContent extends StatelessWidget {
 class OnBoardingContentList {
   final List<OnBoardingContent> list_on_board = [
     OnBoardingContent(
-      image1: "assets/images/OnBoarding1.svg",
-      image2: "assets/icons/Icon1.svg",
-      title: "Purchase Online !!",
-      description:
-          "Kami Menyediakan Layanan Pembelian Dengan Mudah Menggunakan Ponsel Anda",
+      image1: onBoarding1,
+      image2: iconBoarding1,
+      title: onboardingtittle1,
+      description: onboardingdesk1,
     ),
     OnBoardingContent(
-        image1: "assets/images/OnBoarding2.svg",
-        image2: "assets/icons/Icon2.svg",
-        title: "Fast Delivery !!",
-        description: "Memiliki Kurir Yang Kencang Boss, Barang Cepat Sampai"),
+        image1: onBoarding2,
+        image2: iconBoarding2,
+        title: onboardingtittle2,
+        description: onboardingdesk2),
     OnBoardingContent(
-        image1: "assets/images/OnBoarding3.svg",
-        image2: "assets/icons/Icon3.svg",
-        title: "Get your order !!",
-        description: "Ambil Paketmu Sendiri Jika Sudah Diantar"),
+        image1: onBoarding3,
+        image2: iconBoarding3,
+        title: onboardingtittle3,
+        description: onboardingdesk3),
   ];
 }
