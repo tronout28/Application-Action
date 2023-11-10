@@ -1,10 +1,10 @@
 import 'package:application_action/consts/colors.dart';
-import 'package:application_action/pageview/loginpage_view.dart';
+import 'package:application_action/LandingPage/loginpage_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import '../controllers/on_boarding_page_controller.dart';
-import '../widget/on_boarding_widget_view.dart';
+import 'on_boarding_page_controller.dart';
+import 'on_boarding_widget_view.dart';
 
 class OnBoardingPageView extends StatelessWidget {
   OnBoardingPageView({Key? key}) : super(key: key);
