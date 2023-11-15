@@ -1,13 +1,14 @@
+import 'package:application_action/Page/home_page_view.dart';
 import 'package:application_action/consts/consts.dart';
-import 'package:application_action/controllers/auth_controller.dart';
-import 'package:application_action/home.dart';
+import 'package:application_action/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:application_action/LandingPage/register.dart';
 import 'package:get/get.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
-  final controller = Get.put(AuthController());
+  final controller = Get.put(LoginController());
+  static final logic = Get.find<LoginController>();
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +29,11 @@ class LoginPage extends StatelessWidget {
           children: [
             SizedBox(height: 20),
             TextFormField(
+              onChanged: (value) {
+                controller.email.value = value;
+              },
               decoration: InputDecoration(
-                labelText: 'Username',
+                labelText: 'Email',
                 labelStyle: TextStyle(color: Colors.blue),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.blue, width: 2.0),
@@ -44,6 +48,9 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 10),
             TextFormField(
               obscureText: true,
+              onChanged: (value) {
+                controller.password.value = value;
+              },
               decoration: InputDecoration(
                 labelText: 'Password',
                 labelStyle: TextStyle(color: Colors.blue),
@@ -82,13 +89,14 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () async {
-                await controller.loginMethod(context: context).then((value) {
-                  if (value != null) {
-                    VxToast.show(context, msg: 'Login Success');
-                    Get.offAll(() => Home());
-                  }
+              onPressed: () {
+                Obx(() {
+                  return Visibility(
+                    visible: !logic.isEmailAndPasswordCorrect.value,
+                    child: Text("Email atau Password salah"),
+                  );
                 });
+                controller.userLogin();
               },
               style: ElevatedButton.styleFrom(
                 primary: Color.fromARGB(255, 100, 237, 255),

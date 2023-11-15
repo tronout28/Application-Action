@@ -1,3 +1,4 @@
+import 'package:application_action/LandingPage/register.dart';
 import 'package:application_action/Page/profile_page_view.dart';
 import 'package:application_action/consts/consts.dart';
 import 'package:application_action/firebase_options.dart';
@@ -7,7 +8,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'Page/home_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ProfilePageView(),
+      home: LoginPage(),
     );
   }
 }

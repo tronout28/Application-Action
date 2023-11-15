@@ -1,4 +1,8 @@
+import 'package:application_action/Page/favorite_page_view.dart';
+import 'package:application_action/Page/home_page_view.dart';
+import 'package:application_action/Page/profile_page_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class NavBarWidget extends StatefulWidget {
   const NavBarWidget({Key? key});
@@ -11,11 +15,19 @@ class _NavBarWidgetState extends State<NavBarWidget> {
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-    // Tambahkan logika navigasi ke halaman sesuai dengan index yang dipilih.
+  setState(() {
+    _selectedIndex = index;
+  });
+
+  if (index == 0) {
+    Get.to(() => HomePageView());
+  } else if (index == 1) {
+    Get.to(() => FavoritePageView());
+  } else if (index == 2) {
+    Get.to(() => ProfilePageView());
   }
+}
+
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +47,7 @@ class _NavBarWidgetState extends State<NavBarWidget> {
         ),
       ],
       currentIndex: _selectedIndex,
-      selectedItemColor: Colors.blue, // Warna item yang dipilih
+      selectedItemColor: Colors.blue,
       onTap: _onItemTapped,
     );
   }
