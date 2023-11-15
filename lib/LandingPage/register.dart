@@ -1,10 +1,10 @@
+import 'package:application_action/controllers/register_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:application_action/controllers/auth_controller.dart';
 import 'package:application_action/LandingPage/loginpage_view.dart';
 
 class SignUpView extends StatelessWidget {
-  final signUpController = Get.put(AuthController());
+  final signUpController = Get.put(RegisterController());
 
   @override
   Widget build(BuildContext context) {
@@ -73,25 +73,6 @@ class SignUpView extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16.0),
-              TextFormField(
-                onChanged: (value) {
-                  signUpController.confirmPassword.value = value;
-                },
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: 'Confirm Password',
-                  labelStyle: TextStyle(color: Colors.blue),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.blue, width: 2.0),
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey, width: 1.0),
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                ),
-              ),
               SizedBox(height: 10.0),
               Row(
                 children: [
@@ -108,7 +89,7 @@ class SignUpView extends StatelessWidget {
               SizedBox(height: 16.0),
               ElevatedButton(
                 onPressed: () {
-                  signUpController.signupMethod();
+                  signUpController.createUserLogin();
                   Get.off(LoginPage());
                 },
                 style: ElevatedButton.styleFrom(
@@ -134,7 +115,7 @@ class SignUpView extends StatelessWidget {
               Center(
                 child: GestureDetector(
                   onTap: () {
-                    // Tindakan ketika "Already Have An Account? SignIn" diklik
+                    Get.to(LoginPage());
                   },
                   child: RichText(
                     text: TextSpan(

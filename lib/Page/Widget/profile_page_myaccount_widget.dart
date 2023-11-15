@@ -1,5 +1,9 @@
+import 'package:application_action/LandingPage/loginpage_view.dart';
+import 'package:application_action/consts/consts.dart';
+import 'package:application_action/controllers/logout_countroller.dart';
 import 'package:flutter/material.dart';
 import 'package:application_action/Page/AccountSettings/account_settings_page_view.dart';
+import 'package:get/get.dart';
 
 class ProfilePageAccountView extends StatelessWidget {
   const ProfilePageAccountView({Key? key}) : super(key: key);
@@ -26,8 +30,9 @@ class ProfilePageAccountView extends StatelessWidget {
         FractionallySizedBox(
           widthFactor: 1.0,
           child: ElevatedButton(
-            onPressed: () {
-              // Tindakan untuk logout
+            onPressed: () async {
+              await Get.put(logoutController()).signoutMethod(context);
+              Get.offAll(() => LoginPage());
             },
             child: Text('Logout'),
           ),

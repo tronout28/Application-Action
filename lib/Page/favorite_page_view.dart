@@ -1,3 +1,4 @@
+import 'package:application_action/consts/consts.dart';
 import 'package:flutter/material.dart';
 
 class FavoritePageView extends StatelessWidget {
@@ -5,6 +6,13 @@ class FavoritePageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      color: Colors.black,
+      child: "favorite is Empty!"
+          .text
+          .color(primaryColor)
+          .makeCentered(),
+    );
+    
   }
 }
