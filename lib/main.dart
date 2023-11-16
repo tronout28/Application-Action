@@ -1,11 +1,11 @@
 import 'package:application_action/LandingPage/register.dart';
-import 'package:application_action/Page/profile_page_view.dart';
+import 'package:application_action/Page/Profile/profile_page_view.dart';
 import 'package:application_action/consts/consts.dart';
-import 'package:application_action/firebase_options.dart';
-import 'onBoarding/on_boarding_page_view.dart';
+import 'package:application_action/service/firebase_options.dart';
+import 'LandingPage/onBoarding/on_boarding_page_view.dart';
 import 'LandingPage/loginpage_view.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'Page/home_page_view.dart';
+import 'Page/Home/home_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
