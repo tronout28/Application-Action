@@ -1,4 +1,4 @@
-import 'package:application_action/Page/home_page_view.dart';
+import 'package:application_action/Page/Home/home_page_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';

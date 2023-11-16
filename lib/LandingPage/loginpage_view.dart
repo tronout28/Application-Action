@@ -1,4 +1,4 @@
-import 'package:application_action/Page/home_page_view.dart';
+import 'package:application_action/Page/Home/home_page_view.dart';
 import 'package:application_action/consts/consts.dart';
 import 'package:application_action/controllers/login_controller.dart';
 import 'package:flutter/material.dart';

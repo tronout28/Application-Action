@@ -1,8 +1,8 @@
 import 'package:application_action/Page/Widget/CategoryWidget.dart';
-import 'Widget/navbarWidget.dart';
-import 'Widget/advertisingWidget.dart';
+import '../Widget/navbarWidget.dart';
+import '../Widget/advertisingWidget.dart';
 import 'package:flutter/material.dart';
-import 'Widget/searchWidget.dart';
+import '../Widget/searchWidget.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({Key? key}) : super(key: key);

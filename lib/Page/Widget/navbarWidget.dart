@@ -1,6 +1,6 @@
-import 'package:application_action/Page/favorite_page_view.dart';
-import 'package:application_action/Page/home_page_view.dart';
-import 'package:application_action/Page/profile_page_view.dart';
+import 'package:application_action/Page/Favorite/favorite_page_view.dart';
+import 'package:application_action/Page/Home/home_page_view.dart';
+import 'package:application_action/Page/Profile/profile_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
