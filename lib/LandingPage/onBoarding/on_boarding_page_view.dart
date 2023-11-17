@@ -3,8 +3,8 @@ import 'package:application_action/LandingPage/loginpage_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'on_boarding_page_controller.dart';
-import 'on_boarding_widget_view.dart';
+import 'package:application_action/LandingPage/onBoarding/on_boarding_page_controller.dart';
+import 'package:application_action/LandingPage/onBoarding/on_boarding_widget_view.dart';
 
 class OnBoardingPageView extends StatelessWidget {
   OnBoardingPageView({Key? key}) : super(key: key);

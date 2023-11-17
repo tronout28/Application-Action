@@ -3,6 +3,7 @@ import '../Widget/navbarWidget.dart';
 import '../Widget/advertisingWidget.dart';
 import 'package:flutter/material.dart';
 import '../Widget/searchWidget.dart';
+import '../widget/cardWidget.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({Key? key}) : super(key: key);
@@ -83,6 +84,7 @@ class HomePageView extends StatelessWidget {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
+              CardWidget(),
               // Widget MyFeaturedProductWidget() atau widget lainnya disini
             ],
           ),

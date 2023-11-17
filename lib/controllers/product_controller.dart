@@ -9,7 +9,7 @@ import 'package:application_action/Models/headset_model.dart';
 class ProductController extends GetxController {
   var headsetList = <HeadsetModel>[].obs;
   var laptopList = <LaptopModel>[].obs;
-  var handphoneList = <HandphoneModel>[].obs;
+  var headphoneList = <HeadphoneModel>[].obs;
 
    
 
@@ -43,8 +43,8 @@ class ProductController extends GetxController {
       );
     }
     for (var handphone in json['category']['handphone']) {
-      handphoneList.add(
-        HandphoneModel(
+      headphoneList.add(
+        HeadphoneModel(
           id: handphone['id'],
           nama: handphone['nama'],
           harga: handphone['harga'].toDouble(),
