@@ -1,6 +1,5 @@
 import 'package:application_action/LandingPage/loginpage_view.dart';
 import 'package:application_action/consts/consts.dart';
-import 'package:application_action/controllers/logout_countroller.dart';
 import 'package:flutter/material.dart';
 import 'package:application_action/Page/Profile/account_settings_page_view.dart';
 import 'package:get/get.dart';
@@ -12,42 +11,70 @@ class ProfilePageAccountView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        FractionallySizedBox(
-          widthFactor: 1.0,
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => AccountSettingsPage(),
-                ),
-              );
-            },
-            child: Text('Account Settings'),
-          ),
+        buildButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AccountSettingsPage(),
+              ),
+            );
+          },
+          label: 'My Account',
+          icon: Icons.settings,
         ),
         SizedBox(height: 10),
-        FractionallySizedBox(
-          widthFactor: 1.0,
-          child: ElevatedButton(
-            onPressed: () async {
-              await Get.put(logoutController()).signoutMethod(context);
-              Get.offAll(() => LoginPage());
-            },
-            child: Text('Logout'),
-          ),
+        buildButton(
+          onPressed: () async {
+            Get.offAll(() => LoginPage());
+          },
+          label: 'Logout',
+          icon: Icons.logout,
         ),
         SizedBox(height: 10),
-        FractionallySizedBox(
-          widthFactor: 1.0,
-          child: ElevatedButton(
-            onPressed: () {
-              // Help Center
-            },
-            child: Text('Help Center'),
-          ),
+        buildButton(
+          onPressed: () {
+            // Help Center
+          },
+          label: 'Help Center',
+          icon: Icons.help,
         ),
       ],
+    );
+  }
+
+  Widget buildButton({
+    required VoidCallback onPressed,
+    required String label,
+    required IconData icon,
+  }) {
+    return FractionallySizedBox(
+      widthFactor: 1.0,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: Colors.white, // Warna latar belakang tombol
+          onPrimary: Colors.black, // Warna teks pada tombol
+          side: BorderSide(color: Colors.black), // Warna pinggiran tombol
+        ),
+        onPressed: onPressed,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Icon(icon, color: Colors.black), // Warna ikon
+            SizedBox(width: 8), // Jarak antara ikon dan teks
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8),
+                child: Text(
+                  label,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.black), // Warna teks
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

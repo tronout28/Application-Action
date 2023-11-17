@@ -1,4 +1,3 @@
-import 'package:application_action/consts/consts.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePageActivityWidget extends StatelessWidget {
@@ -8,26 +7,63 @@ class ProfilePageActivityWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        FractionallySizedBox(
-          widthFactor: 1.0,
-          child: ElevatedButton(
-            onPressed: () {
-              // Handle Transaksi button press
-            },
-            child: Text('Riwayat Transaksi'),
-          ),
+        buildButton(
+          onPressed: () {
+            // Handle Transaksi button press
+          },
+          label: 'Riwayat Transaksi',
+          icon: Icons.history,
         ),
         SizedBox(height: 10),
-        FractionallySizedBox(
-          widthFactor: 1.0,
-          child: ElevatedButton(
-            onPressed: () {
-              // Handle Favorite button press
-            },
-            child: Text('Favorite'),
-          ),
+        buildButton(
+          onPressed: () {
+            // Handle Favorite button press
+          },
+          label: 'Favorite',
+          icon: Icons.favorite,
         ),
       ],
+    );
+  }
+
+  Widget buildButton({
+    required VoidCallback onPressed,
+    required String label,
+    required IconData icon,
+  }) {
+    return FractionallySizedBox(
+      widthFactor: 1.0,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: Colors.white, // Warna latar belakang tombol
+          onPrimary: Colors.black, // Warna teks pada tombol
+          side: BorderSide(color: Colors.black), // Warna pinggiran tombol
+        ),
+        onPressed: onPressed,
+        child: Stack(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Icon(icon, color: Colors.black), // Warna ikon
+                SizedBox(width: 8), // Jarak antara ikon dan teks
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Flexible(
+                  child: Text(
+                    label,
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
