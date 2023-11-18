@@ -1,4 +1,5 @@
 import 'package:application_action/LandingPage/register.dart';
+import 'package:application_action/Page/Payment/payment_page_view.dart';
 import 'package:application_action/Page/Profile/profile_page_view.dart';
 import 'package:application_action/consts/consts.dart';
 import 'package:application_action/service/firebase_options.dart';
@@ -7,6 +8,7 @@ import 'LandingPage/loginpage_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'Page/Home/home_page_view.dart';
 import 'package:flutter/material.dart';
+import 'Page/Widget/navbarWidget.dart';
 import 'package:get/get.dart';
 
 void main() async {
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePageView(),
+      home: PaymentPage(),
     );
   }
 }

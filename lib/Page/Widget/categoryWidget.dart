@@ -14,7 +14,6 @@ class CategoryWidget extends StatelessWidget {
               IconButton(
                 icon: Icon(Icons.laptop, size: 20),
                 onPressed: () {
-                  // Aksi ketika tombol laptop ditekan
                 },
               ),
               Text('Laptop')

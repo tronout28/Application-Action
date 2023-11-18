@@ -1,4 +1,7 @@
+import 'package:application_action/Page/Favorite/favorite_page_view.dart';
+import 'package:application_action/consts/consts.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProfilePageActivityWidget extends StatelessWidget {
   const ProfilePageActivityWidget({Key? key}) : super(key: key);
@@ -17,7 +20,7 @@ class ProfilePageActivityWidget extends StatelessWidget {
         SizedBox(height: 10),
         buildButton(
           onPressed: () {
-            // Handle Favorite button press
+            Get.to(FavoritePageView());
           },
           label: 'Favorite',
           icon: Icons.favorite,

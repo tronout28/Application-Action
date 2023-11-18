@@ -1,6 +1,7 @@
+// File: detail_page.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:application_action/Models/handphone_model.dart';
+import 'package:application_action/Models/product_mode.dart';
 
 class DetailPageView extends StatelessWidget {
   DetailPageView({Key? key}) : super(key: key);
@@ -21,7 +22,6 @@ class DetailPageView extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        // Kembali
                         Navigator.pop(context);
                       },
                       child: Container(
@@ -57,10 +57,17 @@ class DetailPageView extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Icon(
-                        Icons.favorite,
-                        size: 30,
-                        color: Colors.grey,
+                      child: IconButton(
+                        icon: Icon(
+                          argument["isFavorite"]
+                              ? Icons.favorite
+                              : Icons.favorite_border,
+                          size: 30,
+                          color: Colors.red,
+                        ),
+                        onPressed: () {
+                          argument["isFavorite"] = !argument["isFavorite"];
+                        },
                       ),
                     ),
                   ],
@@ -76,7 +83,7 @@ class DetailPageView extends StatelessWidget {
                       argument["foto"] as String,
                       height: 350,
                       width: 350,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                     ),
                   ],
                 ),
@@ -124,7 +131,7 @@ class DetailPageView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "${argument["harga"]}",
+                          "\$${argument["harga"]}",
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w500,
@@ -134,7 +141,7 @@ class DetailPageView extends StatelessWidget {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            //  pembelian 
+                            //  pembelian
                           },
                           child: Text("Buy Now"),
                         ),

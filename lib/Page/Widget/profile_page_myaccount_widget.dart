@@ -13,14 +13,9 @@ class ProfilePageAccountView extends StatelessWidget {
       children: [
         buildButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => AccountSettingsPage(),
-              ),
-            );
+        //edit
           },
-          label: 'My Account',
+          label: 'Edit Account',
           icon: Icons.settings,
         ),
         SizedBox(height: 10),
