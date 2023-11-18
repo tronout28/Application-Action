@@ -62,7 +62,7 @@ class CardWidget extends StatelessWidget {
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      Product[i]["harga"].toString(),
+                      "\$${Product[i]["harga"].toString()}",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w500,

@@ -1,9 +1,14 @@
 import 'package:application_action/Page/Payment/widget/payment_card.dart';
+import 'package:application_action/Page/Successfull/succesPayment.dart';
 import 'package:flutter/material.dart';
+
 import 'package:application_action/consts/consts.dart';
+import 'package:get/get.dart';
 
 class PaymentPage extends StatefulWidget {
-  const PaymentPage({Key? key}) : super(key: key);
+  final double price;
+
+  const PaymentPage({Key? key, required this.price}) : super(key: key);
 
   @override
   _PaymentPageState createState() => _PaymentPageState();
@@ -20,7 +25,7 @@ class _PaymentPageState extends State<PaymentPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Payment"),
-        leading: Icon(Icons.arrow_back_ios),
+        automaticallyImplyLeading: true,
         centerTitle: true,
       ),
       body: Container(
@@ -60,13 +65,12 @@ class _PaymentPageState extends State<PaymentPage> {
               child: Column(
                 children: [
                   Row(
-                    children: [Text("Subtotal"), Spacer(), Text("Rp. 200.000")],
-                  ),
-                  Row(
                     children: [
-                      Text("Shipping fee"),
+                      Text("Price"),
                       Spacer(),
-                      Text("Rp. 200.000"),
+                      Text(
+                        "\$ ${widget.price.toStringAsFixed(2)}",
+                      ),
                     ],
                   ),
                   Container(
@@ -86,7 +90,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       ),
                       Spacer(),
                       Text(
-                        "Rp. 400.000",
+                        "\$ ${widget.price.toStringAsFixed(2)}",
                         style: TextStyle(fontWeight: FontWeight.w600),
                       ),
                     ],
@@ -97,7 +101,7 @@ class _PaymentPageState extends State<PaymentPage> {
             SizedBox(height: 20),
             InkWell(
               onTap: () {
-                // Handle the payment confirmation
+                Get.to(SuccessPage());
               },
               child: Container(
                 width: screenWidth * 0.92,

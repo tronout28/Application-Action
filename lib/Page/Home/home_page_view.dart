@@ -1,5 +1,4 @@
 import 'package:application_action/Page/Widget/CategoryWidget.dart';
-import '../Widget/navbarWidget.dart';
 import '../Widget/advertisingWidget.dart';
 import 'package:flutter/material.dart';
 import '../Widget/searchWidget.dart';
@@ -24,7 +23,7 @@ class HomePageView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Welcome, Haidar'),
+                  Text('Welcome, Username'),
                   Text(
                     'What are you looking for today?',
                     style: TextStyle(fontSize: 12, color: Colors.black),

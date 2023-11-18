@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:application_action/Models/product_mode.dart';
 import 'package:application_action/Page/DetailPage/detail_page_view.dart';
-import 'package:application_action/Page/Widget/navbarWidget.dart';
 
 class FavoritePageView extends StatefulWidget {
   const FavoritePageView({Key? key}) : super(key: key);
@@ -16,7 +15,6 @@ class _FavoritePageViewState extends State<FavoritePageView> {
   @override
   void initState() {
     super.initState();
-    // Inisialisasi data favoriteProducts saat widget pertama kali dibuat
     initializeFavoriteProducts();
   }
 
@@ -52,7 +50,9 @@ class _FavoritePageViewState extends State<FavoritePageView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favorite Headphones'),
+        automaticallyImplyLeading: true,
+        title: Text('WishList'),
+        centerTitle: true,
       ),
       body: ListView.builder(
         itemCount: favoriteProducts.length,

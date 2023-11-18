@@ -1,7 +1,6 @@
 import 'package:application_action/LandingPage/loginpage_view.dart';
 import 'package:application_action/consts/consts.dart';
 import 'package:flutter/material.dart';
-import 'package:application_action/Page/Profile/account_settings_page_view.dart';
 import 'package:get/get.dart';
 
 class ProfilePageAccountView extends StatelessWidget {

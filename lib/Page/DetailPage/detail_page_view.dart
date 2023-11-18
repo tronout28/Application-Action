@@ -1,7 +1,7 @@
 // File: detail_page.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:application_action/Models/product_mode.dart';
+import 'package:application_action/Page/Payment/payment_page_view.dart';
 
 class DetailPageView extends StatelessWidget {
   DetailPageView({Key? key}) : super(key: key);
@@ -141,7 +141,14 @@ class DetailPageView extends StatelessWidget {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            //  pembelian
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PaymentPage(
+                                    price: (argument["harga"] as double)
+                                        .toDouble()),
+                              ),
+                            );
                           },
                           child: Text("Buy Now"),
                         ),

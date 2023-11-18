@@ -1,8 +1,7 @@
-import 'package:application_action/Page/Home/home_page_view.dart';
+import 'package:application_action/Page/Widget/navbarWidget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 
 class LoginController extends GetxController {
   // variabel set obsecureText
@@ -37,8 +36,8 @@ class LoginController extends GetxController {
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: email.value, password: password.value);
-          writeToSharedPreference();
-          Get.offAll(HomePageView());
+      writeToSharedPreference();
+      Get.offAll(NavbarWidget());
     } on FirebaseAuthException catch (e) {
       print(e);
       if (e.code == 'INVALID_LOGIN_CREDENTIALS') {
@@ -46,7 +45,7 @@ class LoginController extends GetxController {
         isEmailAndPasswordCorrect.value = false;
         isEmailValid.value = false;
         isPasswordValid.value = false;
-      } 
+      }
     }
   }
 
@@ -55,6 +54,6 @@ class LoginController extends GetxController {
     final prefs = await SharedPreferences.getInstance();
     prefs.setBool("isLogin", true);
     prefs.setString("email", email.value);
-    Get.offAll(HomePageView());
+    Get.offAll(NavbarWidget());
   }
 }

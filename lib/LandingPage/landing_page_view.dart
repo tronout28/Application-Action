@@ -1,7 +1,9 @@
 import 'package:application_action/LandingPage/loginpage_view.dart';
+import 'package:application_action/consts/consts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:application_action/LandingPage/register.dart';
 
 class LandingPageView extends StatelessWidget {
   const LandingPageView({Key? key});
@@ -49,7 +51,7 @@ class LandingPageView extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                //signup
+                Get.to(SignUpView());
               },
               child: Text(
                 'Sign Up',
