@@ -1,51 +1,69 @@
 import 'package:flutter/material.dart';
 
+// PaymentCard
 class PaymentCard extends StatefulWidget {
   final String title;
   final String image;
-  const PaymentCard({required this.title, required this.image, Key? key})
-      : super(key: key);
+  final bool isSelected; // Add this line
+  final VoidCallback onChanged;
+
+  const PaymentCard({
+    required this.title,
+    required this.image,
+    required this.isSelected, // Add this line
+    required this.onChanged,
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<PaymentCard> createState() => _PaymentCardState();
 }
 
 class _PaymentCardState extends State<PaymentCard> {
-  bool isClicked = false;
+  // Remove the line: bool isSelected = false;
+
   @override
   Widget build(BuildContext context) {
-    double screenWidht = MediaQuery.of(context).size.width;
-    double screemHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return InkWell(
       onTap: () {
         setState(() {
-          isClicked = !isClicked;
+          widget.onChanged();
         });
       },
       child: Container(
-        width: screenWidht * 0.92,
-        height: screemHeight * 0.08,
+        width: screenWidth * 0.92,
+        height: screenHeight * 0.08,
         padding: EdgeInsets.only(left: 20),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-                color: isClicked ? Colors.orange : Colors.grey, width: 2)),
-        child: Row(children: [
-          Container(
-            width: 20,
-            height: 20,
-            margin: EdgeInsets.only(right: 10),
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: isClicked ? Colors.orange : Colors.white,
-                border:
-                    Border.all(color: isClicked ? Colors.orange : Colors.grey)),
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            color: widget.isSelected ? Colors.orange : Colors.grey,
+            width: 2,
           ),
-          Text("Dana"),
-          Spacer(),
-          Image.asset('assets/images/61kVJZZcYTL-removebg-preview.png')
-        ]),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 20,
+              height: 20,
+              margin: EdgeInsets.only(right: 10),
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: widget.isSelected ? Colors.orange : Colors.white,
+                border: Border.all(
+                  color: widget.isSelected ? Colors.orange : Colors.grey,
+                ),
+              ),
+            ),
+            Text(widget.title),
+            Spacer(),
+            Image.asset(widget.image),
+          ],
+        ),
       ),
     );
   }
