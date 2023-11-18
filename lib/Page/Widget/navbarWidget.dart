@@ -1,54 +1,47 @@
+import 'package:flutter/material.dart';
 import 'package:application_action/Page/Favorite/favorite_page_view.dart';
 import 'package:application_action/Page/Home/home_page_view.dart';
 import 'package:application_action/Page/Profile/profile_page_view.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:application_action/controllers/navbar_controller.dart';
 
-class NavBarWidget extends StatefulWidget {
-  const NavBarWidget({Key? key});
+class NavbarWidget extends StatefulWidget {
+  final BottomBarController navigationController =
+      Get.put(BottomBarController());
 
   @override
-  _NavBarWidgetState createState() => _NavBarWidgetState();
+  State<NavbarWidget> createState() => _ConvexNavigationBarPageState();
 }
 
-class _NavBarWidgetState extends State<NavBarWidget> {
-  int _selectedIndex = 0;
+class _ConvexNavigationBarPageState extends State<NavbarWidget> {
+  BottomBarController controller = Get.put(BottomBarController());
 
-  void _onItemTapped(int index) {
-  setState(() {
-    _selectedIndex = index;
-  });
-
-  if (index == 0) {
-    Get.to(() => HomePageView());
-  } else if (index == 1) {
-    Get.to(() => FavoritePageView());
-  } else if (index == 2) {
-    Get.to(() => ProfilePageView());
-  }
-}
-
+  final List<Widget> pages = [
+    HomePageView(),
+    FavoritePageView(),
+    ProfilePageView()
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
+    return Scaffold(
+      body: Obx(() => pages[controller.currentIndex.value]),
+      bottomNavigationBar: Obx(
+        () => BottomNavigationBar(
+          currentIndex: controller.currentIndex.value,
+          onTap: controller.changeIndex,
+          selectedItemColor: Colors.blue.shade200,
+          backgroundColor: Colors.white,
+          unselectedItemColor: Colors.grey,
+          type: BottomNavigationBarType.fixed,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.favorite), label: 'WishList'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          ],
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart),
-          label: 'Cart',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person),
-          label: 'Profile',
-        ),
-      ],
-      currentIndex: _selectedIndex,
-      selectedItemColor: Colors.blue,
-      onTap: _onItemTapped,
+      ),
     );
   }
 }

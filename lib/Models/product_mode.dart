@@ -1,0 +1,117 @@
+class Products {
+  int id;
+  String nama;
+  double harga;
+  String deskripsi;
+  String foto;
+  bool isFavorite;
+
+  Products({
+    required this.id,
+    required this.nama,
+    required this.harga,
+    required this.deskripsi,
+    required this.foto,
+    this.isFavorite = false,
+  });
+}
+
+List<Map<String, dynamic>> Product = [
+  {
+    "id": 1,
+    "nama": "Razer BlackShark V2 Pro",
+    "harga": 179.99,
+    "deskripsi":
+        "Wireless headset with THX Spatial Audio and lightweight design.",
+    "foto":
+        "https://images.tokopedia.net/img/cache/700/VqbcmM/2020/11/20/e3975e71-e49c-4b85-9649-6088439e15ed.jpg",
+    "isFavorite": false,
+  },
+  {
+    "id": 2,
+    "nama": "Samsung Galaxy S21 Ultra",
+    "harga": 1199.99,
+    "deskripsi":
+        "Android flagship with a dynamic AMOLED display and a versatile 108MP camera.",
+    "foto":
+        "https://cdn0-production-images-kly.akamaized.net/53pdTQm4TK-aOC3uJGpYBuVttVA=/156x0:823x667/1200x900/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3358568/original/056571200_1611558932-Samsung_Galaxy_S21_Ultra_5G_hadir.jpg",
+    "isFavorite": false,
+  },
+  {
+    "id": 3,
+    "nama": "Apple MacBook Pro 16-inch (2021)",
+    "harga": 2399.99,
+    "deskripsi":
+        "Powerful MacBook with M1 Pro or M1 Max processor and stunning Retina XDR display.",
+    "foto":
+        "https://i.rtings.com/assets/products/AhhlPmav/apple-macbook-pro-16-2021/design-medium.jpg",
+    "isFavorite": false,
+  },
+  {
+    "id": 4,
+    "nama": "OnePlus 9 Pro",
+    "harga": 899.99,
+    "deskripsi":
+        "Android flagship with a Fluid AMOLED display and partnership with Hasselblad for the camera system.",
+    "foto":
+        "https://oasis.opstatics.com/content/dam/oasis/page/2021/9-series/compare/in/compare/9-pro/9pPineGreen.png",
+    "isFavorite": false,
+  },
+  {
+    "id": 5,
+    "nama": "Xiaomi Mi 11 Ultra",
+    "harga": 1199.99,
+    "deskripsi":
+        "Xiaomi flagship featuring a 50MP camera, AMOLED display, and Snapdragon 888.",
+    "foto":
+        "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1623754151.40735565.png",
+    "isFavorite": false,
+  },
+  {
+    "id": 6,
+    "nama": "Dell XPS 13 (2021)",
+    "harga": 1299.99,
+    "deskripsi":
+        "Premium Windows laptop with InfinityEdge display and high performance.",
+    "foto":
+        "https://i.rtings.com/assets/products/Sg92Amv1/dell-xps-13-2021/design-medium.jpg",
+    "isFavorite": false,
+  },
+  {
+    "id": 7,
+    "nama": "Corsair HS70 Pro Wireless",
+    "harga": 89.99,
+    "deskripsi":
+        "Wireless gaming headset with good audio quality and long battery life.",
+    "foto": "https://m.media-amazon.com/images/I/61XjjJovijL.jpg",
+    "isFavorite": false,
+  },
+  {
+    "id": 8,
+    "nama": "Apple iPhone 13 Pro",
+    "harga": 999.99,
+    "deskripsi":
+        "Flagship iOS smartphone with ProMotion display and advanced camera system.",
+    "foto":
+        "https://cdn.eraspace.com/media/catalog/product/i/p/iphone_13_pro_alpine_green_1_4.jpg",
+    "isFavorite": false,
+  },
+  {
+    "id": 9,
+    "nama": "Asus ROG Zephyrus G14",
+    "harga": 1499.99,
+    "deskripsi":
+        "Gaming laptop featuring AMD Ryzen 9 5900HS processor, Nvidia RTX 3060 GPU, and QHD display.",
+    "foto": "https://www.softcom.co.id/wp-content/uploads/2020/07/4-23.jpg",
+    "isFavorite": false,
+  },
+  {
+    "id": 10,
+    "nama": "Turtle Beach Elite Pro 2 + SuperAmp",
+    "harga": 179.99,
+    "deskripsi":
+        "High-quality sound, integrated audio control, and comfortable design.",
+    "foto": "https://m.media-amazon.com/images/I/71RLLme+7VL.jpg",
+    "isFavorite": false,
+  },
+];

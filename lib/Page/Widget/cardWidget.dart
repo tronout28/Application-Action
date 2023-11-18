@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:application_action/Page/DetailPage/detail_page_view.dart';
-import 'package:application_action/Models/handphone_model.dart';
+import 'package:application_action/Models/product_mode.dart';
 
 class CardWidget extends StatelessWidget {
   const CardWidget({Key? key});
@@ -16,14 +16,14 @@ class CardWidget extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       children: [
-        for (int i = 0; i < headphone.length; i++)
+        for (int i = 0; i < Product.length; i++)
           GestureDetector(
             onTap: () {
-              Get.to(() => DetailPageView(), arguments: headphone[i]);
+              Get.to(() => DetailPageView(), arguments: Product[i]);
             },
             child: Container(
               height: cardHeight,
-              padding: EdgeInsets.only(left: 15, right: 15, top: 1),
+              padding: EdgeInsets.only(left: 15, right: 15, top: 5),
               margin: EdgeInsets.all(4),
               decoration: BoxDecoration(
                 color: Color(0xFFF5F9FD),
@@ -42,16 +42,16 @@ class CardWidget extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(10),
                     child: Image.network(
-                      headphone[i]["foto"] as String,
+                      Product[i]["foto"] as String,
                       height: 100,
                       width: 100,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 8),
                     child: Text(
-                      headphone[i]["nama"] as String,
+                      Product[i]["nama"] as String,
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -62,7 +62,7 @@ class CardWidget extends StatelessWidget {
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      headphone[i]["harga"].toString(),
+                      Product[i]["harga"].toString(),
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w500,

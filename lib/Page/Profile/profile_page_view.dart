@@ -10,7 +10,7 @@ class ProfilePageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
+        automaticallyImplyLeading: true,
         title: Text('Profile'),
         centerTitle: true,
       ),
@@ -62,7 +62,6 @@ class ProfilePageView extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: NavBarWidget(),
     );
   }
 }

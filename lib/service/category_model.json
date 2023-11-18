@@ -1,156 +1,12 @@
 {
     "category": {
-        "headset": [
+        "profuct": [
             {
                 "id": 1,
-                "nama": "SteelSeries Arctis Pro Wireless",
-                "harga": 299.99,
-                "deskripsi": "Wireless headset with high-quality sound and excellent microphone.",
-                "foto": "https://blossomzones.com/wp-content/uploads/2019/01/ARCTIS-PRO-WIRELESS.jpg"
-            },
-            {
-                "id": 2,
-                "nama": "Logitech G Pro X Gaming Headset",
-                "harga": 129.99,
-                "deskripsi": "Lightweight design with great sound quality.",
-                "foto": "https://dorangadget.com/wp-content/uploads/2021/03/Logitech-PRO-X-Gaming-Headset-5.jpg"
-            },
-            {
-                "id": 3,
-                "nama": "HyperX Cloud Alpha",
-                "harga": 99.99,
-                "deskripsi": "Stereo gaming headset with durable construction and maximum comfort.",
-                "foto": "https://m.media-amazon.com/images/I/61i+QbshAFL.jpg"
-            },
-            {
-                "id": 4,
                 "nama": "Razer BlackShark V2 Pro",
                 "harga": 179.99,
                 "deskripsi": "Wireless headset with THX Spatial Audio and lightweight design.",
                 "foto": "https://images.tokopedia.net/img/cache/700/VqbcmM/2020/11/20/e3975e71-e49c-4b85-9649-6088439e15ed.jpg"
-            },
-            {
-                "id": 5,
-                "nama": "Corsair HS70 Pro Wireless",
-                "harga": 89.99,
-                "deskripsi": "Wireless gaming headset with good audio quality and long battery life.",
-                "foto": "https://m.media-amazon.com/images/I/61XjjJovijL.jpg"
-            },
-            {
-                "id": 6,
-                "nama": "ASTRO Gaming A50 Wireless",
-                "harga": 299.99,
-                "deskripsi": "Wireless headset with outstanding comfort and Dolby Digital 7.1 sound.",
-                "foto": "https://m.media-amazon.com/images/I/71PeqDCFgCL.jpg"
-            },
-            {
-                "id": 7,
-                "nama": "Sennheiser Game One",
-                "harga": 169.99,
-                "deskripsi": "Premium audio quality, noise-canceling microphone, and open-back design.",
-                "foto": "https://m.media-amazon.com/images/I/61lmgrpck3L.jpg"
-            },
-            {
-                "id": 8,
-                "nama": "Asus ROG Strix Fusion 700",
-                "harga": 219.99,
-                "deskripsi": "Wireless headset with 7.1 surround sound, touch controls, and detachable microphone.",
-                "foto": "https://m.media-amazon.com/images/I/81y3qrRTzvL._AC_UF894,1000_QL80_.jpg"
-            },
-            {
-                "id": 9,
-                "nama": "Turtle Beach Elite Pro 2 + SuperAmp",
-                "harga": 179.99,
-                "deskripsi": "High-quality sound, integrated audio control, and comfortable design.",
-                "foto": "https://m.media-amazon.com/images/I/71RLLme+7VL.jpg"
-            },
-            {
-                "id": 10,
-                "nama": "Alienware Wireless AW988",
-                "harga": 249.99,
-                "deskripsi": "Premium wireless gaming headset with excellent sound quality and comfort.",
-                "foto": "https://m.media-amazon.com/images/I/71KEkeUUMzL.jpg"
-            }
-        ],
-        "laptop": [
-            {
-                "id": 1,
-                "nama": "Apple MacBook Pro 16-inch (2021)",
-                "harga": 2399.99,
-                "deskripsi": "Powerful MacBook with M1 Pro or M1 Max processor and stunning Retina XDR display.",
-                "foto": "https://i.rtings.com/assets/products/AhhlPmav/apple-macbook-pro-16-2021/design-medium.jpg"
-            },
-            {
-                "id": 2,
-                "nama": "Dell XPS 13 (2021)",
-                "harga": 1299.99,
-                "deskripsi": "Premium Windows laptop with InfinityEdge display and high performance.",
-                "foto": "https://i.rtings.com/assets/products/Sg92Amv1/dell-xps-13-2021/design-medium.jpg"
-            },
-            {
-                "id": 3,
-                "nama": "Asus ROG Zephyrus G14",
-                "harga": 1499.99,
-                "deskripsi": "Gaming laptop featuring AMD Ryzen 9 5900HS processor, Nvidia RTX 3060 GPU, and QHD display.",
-                "foto": "https://www.softcom.co.id/wp-content/uploads/2020/07/4-23.jpg"
-            },
-            {
-                "id": 4,
-                "nama": "Apple MacBook Air (M2, 2022)",
-                "harga": 999.99,
-                "deskripsi": "Lightweight MacBook with M2 processor, Retina display, and sleek design.",
-                "foto": "https://asset.kompas.com/crops/gjREufJ-zq0yaBeL9aVPXgi1PCI=/0x0:1386x924/750x500/data/photo/2022/09/08/6319aeffb0590.jpg"
-            },
-            {
-                "id": 5,
-                "nama": "HP Spectre x360 (2021)",
-                "harga": 1399.99,
-                "deskripsi": "2-in-1 laptop with OLED display, high performance, and premium design.",
-                "foto": "https://images.tokopedia.net/img/cache/700/attachment/2021/10/13/162839138/162839138_9c90b117-e9b0-4b2b-9f7d-f6e6386203cb.jpg"
-            },
-            {
-                "id": 6,
-                "nama": "Lenovo ThinkPad X1 Carbon (9th Gen)",
-                "harga": 1699.99,
-                "deskripsi": "Lightweight business laptop with legendary ThinkPad keyboard and 4K display.",
-                "foto": "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/1/26/25396306-b167-43ef-83cd-cca1faa3fb58.jpg"
-            },
-            {
-                "id": 7,
-                "nama": "Razer Blade 17 (2021)",
-                "harga": 2899.99,
-                "deskripsi": "Gaming laptop with Intel Core i9 processor, Nvidia RTX 3080 GPU, and 360Hz display.",
-                "foto": "https://i.pcmag.com/imagery/reviews/01JV4w4qQWH7aNf31ZUaKK7-3.fit_scale.size_760x427.v1602780187.jpg"
-            },
-            {
-                "id": 8,
-                "nama": "Microsoft Surface Laptop 4",
-                "harga": 1299.99,
-                "deskripsi": "Premium Windows laptop with PixelSense display and powerful configuration options.",
-                "foto": "microsoft_surface_laptop_4.jpg"
-            },
-            {
-                "id": 9,
-                "nama": "Acer Swift 3",
-                "harga": 699.99,
-                "deskripsi": "Affordable Windows laptop with good performance and lightweight design.",
-                "foto": "https://www.amd-id.com/wp-content/uploads/2020/12/Kesimpulan-ACER-Swift-3-Ryzen.jpg"
-            },
-            {
-                "id": 10,
-                "nama": "LG Gram 17 (2021)",
-                "harga": 1599.99,
-                "deskripsi": "Ultra-light laptop with a large 17-inch display and long-lasting battery.",
-                "foto": "https://cdn.vox-cdn.com/thumbor/48Q6dei3M__5_Gdv3TDQlkH_RfQ=/0x0:2040x1360/1400x1400/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/22411713/cfaulkner_20210326_4491_0006.jpg"
-            }
-        ],
-        "handphone": [
-            {
-                "id": 1,
-                "nama": "Apple iPhone 13 Pro",
-                "harga": 999.99,
-                "deskripsi": "Flagship iOS smartphone with ProMotion display and advanced camera system.",
-                "foto": "https://cdn.eraspace.com/media/catalog/product/i/p/iphone_13_pro_alpine_green_1_4.jpg"
             },
             {
                 "id": 2,
@@ -161,10 +17,10 @@
             },
             {
                 "id": 3,
-                "nama": "Google Pixel 6 Pro",
-                "harga": 899.99,
-                "deskripsi": "Android device known for its computational photography and clean stock Android experience.",
-                "foto": "https://cdn.idntimes.com/content-images/post/20211024/rzqr4a86ivsnb5cu6lakt7-31e22e52b108d543b233747082f14df1_600x400.jpg"
+                "nama": "Apple MacBook Pro 16-inch (2021)",
+                "harga": 2399.99,
+                "deskripsi": "Powerful MacBook with M1 Pro or M1 Max processor and stunning Retina XDR display.",
+                "foto": "https://i.rtings.com/assets/products/AhhlPmav/apple-macbook-pro-16-2021/design-medium.jpg"
             },
             {
                 "id": 4,
@@ -182,38 +38,38 @@
             },
             {
                 "id": 6,
-                "nama": "Apple iPhone 13",
-                "harga": 799.99,
-                "deskripsi": "Latest iPhone with the A15 Bionic chip and improved camera capabilities.",
-                "foto": "https://www.apple.com/newsroom/images/product/iphone/geo/Apple_iphone13_hero_geo_09142021_inline.jpg.large.jpg"
+                "nama": "Dell XPS 13 (2021)",
+                "harga": 1299.99,
+                "deskripsi": "Premium Windows laptop with InfinityEdge display and high performance.",
+                "foto": "https://i.rtings.com/assets/products/Sg92Amv1/dell-xps-13-2021/design-medium.jpg"
             },
             {
                 "id": 7,
-                "nama": "Samsung Galaxy Z Fold 3",
-                "harga": 1799.99,
-                "deskripsi": "Foldable Android device with a large flexible display and S Pen support.",
-                "foto": "https://cworld.id/wp-content/uploads/2021/08/Z-Fold3-Phantom-Silver-01.png"
+                "nama": "Corsair HS70 Pro Wireless",
+                "harga": 89.99,
+                "deskripsi": "Wireless gaming headset with good audio quality and long battery life.",
+                "foto": "https://m.media-amazon.com/images/I/61XjjJovijL.jpg"
             },
             {
                 "id": 8,
-                "nama": "OnePlus 9",
-                "harga": 729.99,
-                "deskripsi": "High-performance Android smartphone with a Hasselblad-tuned camera system.",
-                "foto": "https://www.tokohapedia.co.id/storage/media/tyLJk6U2BjitBBnrODTyQRn9Exznb1elBaiDSfzu.png"
+                "nama": "Apple iPhone 13 Pro",
+                "harga": 999.99,
+                "deskripsi": "Flagship iOS smartphone with ProMotion display and advanced camera system.",
+                "foto": "https://cdn.eraspace.com/media/catalog/product/i/p/iphone_13_pro_alpine_green_1_4.jpg"
             },
             {
                 "id": 9,
-                "nama": "Xiaomi Poco F3",
-                "harga": 499.99,
-                "deskripsi": "Affordable Android device with a Snapdragon 870 processor and a 120Hz display.",
-                "foto": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/4/2/2175f3d6-6dba-42b9-a8bf-137df17e7fba.jpg"
+                "nama": "Asus ROG Zephyrus G14",
+                "harga": 1499.99,
+                "deskripsi": "Gaming laptop featuring AMD Ryzen 9 5900HS processor, Nvidia RTX 3060 GPU, and QHD display.",
+                "foto": "https://www.softcom.co.id/wp-content/uploads/2020/07/4-23.jpg"
             },
             {
                 "id": 10,
-                "nama": "Google Pixel 5",
-                "harga": 699.99,
-                "deskripsi": "Compact Android phone with a focus on photography and a clean stock Android experience.",
-                "foto": "https://m.media-amazon.com/images/I/81-fNmQqlLL._AC_UF1000,1000_QL80_.jpg"
+                "nama": "Turtle Beach Elite Pro 2 + SuperAmp",
+                "harga": 179.99,
+                "deskripsi": "High-quality sound, integrated audio control, and comfortable design.",
+                "foto": "https://m.media-amazon.com/images/I/71RLLme+7VL.jpg"
             }
         ]
     }
