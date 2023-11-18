@@ -1,4 +1,3 @@
-import 'package:application_action/Page/Home/home_page_view.dart';
 import 'package:application_action/consts/consts.dart';
 import 'package:application_action/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
@@ -78,7 +77,6 @@ class LoginPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // Tindakan ketika "Forgot Password" diklik
                   },
                   child: Text(
                     'Forgot Password',
@@ -116,8 +114,6 @@ class LoginPage extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 Get.to(SignUpView());
-                // Tindakan ketika "Don't have an account? SignUp" diklik
-                // Misalnya, navigasi ke halaman pendaftaran
               },
               child: RichText(
                 text: TextSpan(

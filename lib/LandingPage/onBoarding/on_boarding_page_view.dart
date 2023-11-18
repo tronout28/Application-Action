@@ -1,5 +1,5 @@
+import 'package:application_action/LandingPage/landing_page_view.dart';
 import 'package:application_action/consts/colors.dart';
-import 'package:application_action/LandingPage/loginpage_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -55,7 +55,7 @@ class OnBoardingPageView extends StatelessWidget {
                         ElevatedButton.styleFrom(backgroundColor: fourthColor),
                     onPressed: () {
                       controller.currentIndex.value == 2
-                          ? Get.to(LoginPage())
+                          ? Get.to(LandingPageView())
                           : controller.pageController.nextPage(
                               duration: const Duration(milliseconds: 500),
                               curve: Curves.ease,

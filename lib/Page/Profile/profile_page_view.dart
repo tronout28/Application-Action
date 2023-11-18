@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../Widget/navbarWidget.dart';
 import '../Widget/profile_page_myactivity_widget.dart';
 import '../Widget/profile_page_myaccount_widget.dart';
 
