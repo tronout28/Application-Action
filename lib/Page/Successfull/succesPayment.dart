@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:application_action/Page/Home/home_page_view.dart';
 
 class SuccessPage extends StatelessWidget {
   @override
@@ -21,8 +23,7 @@ class SuccessPage extends StatelessWidget {
             SizedBox(height: 10.0),
             ElevatedButton(
               onPressed: () {
-                // Navigasi kembali ke halaman sebelumnya atau halaman utama
-                Navigator.pop(context);
+                Get.to(HomePageView());
               },
               child: Text('Kembali'),
             ),
